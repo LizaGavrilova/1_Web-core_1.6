@@ -1,0 +1,87 @@
+.header {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        background-color: $background-white;
+        border-bottom: 1px solid $header_border;
+    }
+
+    &__burger-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header__burger {
+            margin-right: 16px;
+        }        
+        .header__divider-first {
+            display: none;
+        }
+        .header__group {
+            margin-right: 16px;
+        }
+        @media screen and (min-width: 768px) {
+            .header__burger {
+                margin-right: 20px;
+            }
+            .header__divider-first {
+                display: inline;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header__divider-second {
+            margin-right: 20px;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+        .header__call {
+            display: none;
+        }
+        .header__chat {
+            display: none;
+        }
+        .header__profile {
+            display: none;
+        }
+        .header__divider-third {
+            display: none;
+        }
+        .header__repair {
+            margin-right: 16px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .header__call {
+                display: inline;
+                margin-right: 16px;
+            }
+            .header__chat {
+                display: inline;
+                margin-right: 16px;
+            }
+            .header__profile {
+                display: inline;
+                margin-right: 20px;
+            }
+            .header__divider-third {
+                display: inline;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1366px) {
+        display: none;
+    }
+}

@@ -1,0 +1,222 @@
+.main {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        min-width: 320px;
+        padding-top: 24px;
+        background-color: $background-gray;
+    }
+    
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-left {
+            display: flex;
+            align-items: center;
+
+            &-text {
+                font-family: TT Lakes Bold;
+                font-size: 28px;
+                line-height: 40px;
+                letter-spacing: -0.6px;
+                width: 288px;
+                color: $text-black;
+                margin: 0 16px 0 12px;
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+
+            &-button_1 {
+                display: flex;
+                align-items: center;
+                font-family: TT Lakes Medium;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $text-black;
+                margin-right: 32px;
+                
+                img {
+                    margin-left: 8px;
+                }
+            }
+
+            &-button_2 {
+                display: flex;
+                align-items: center;
+                font-family: TT Lakes Medium;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $text-black;
+                
+                img {
+                    margin-left: 8px;
+                }
+            }
+
+            @media screen and (min-width: 320px){
+                display: none;
+            }
+            @media screen and (min-width: 768px){
+                display: none;
+            }
+            @media screen and (min-width: 1366px){
+                display: flex;
+            }
+        }
+    } 
+    &__navigation {
+        display: flex;
+        overflow-x: scroll;
+        align-items: baseline;
+        justify-content: space-between;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &-list {
+            display: flex;
+            padding: 0;
+            margin: 0;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                margin: 24px 20px 0 20px;
+            }
+        }
+
+        &-link {
+            font-family: TT Lakes Medium;
+            color: $text-gray;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            white-space: nowrap;
+            padding: 6px 10px 6px 10px;
+
+            &_active, &:hover, &:focus {
+                color: $text-gray;
+                background-color: $background-white;
+                border: 2px solid #B8FFEC;
+                border-radius: 6px;         
+                padding: 4px 8px 4px 8px;  
+                outline: none !important;           
+            }                    
+        }
+
+        @media screen and (min-width: 1366px) {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    } 
+    
+    &__general {
+        display: flex;
+        flex-direction: column;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            margin-top: 18px;
+            margin-left: 24px;
+
+            &-paragraph_1 {
+                font-family: TT Lakes Regular;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.2px;
+                color: $text-black;
+            }
+
+            &-paragraph_2 {
+                display: none;
+
+                @media screen and (min-width: 768px){
+                    display: block;
+                    font-family: TT Lakes Regular;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    color: $text-black;
+                }
+                @media screen and (min-width: 1366px){
+                    display: none;
+                }               
+            }
+            &-paragraph_3 {
+                display: none;
+
+                @media screen and (min-width: 768px){
+                    display: none;
+                }
+                @media screen and (min-width: 1366px){
+                    display: block;
+                    font-family: TT Lakes Regular;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    color: $text-black;
+                }                
+            }
+        }
+
+        &-read-more {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            .read-more_icon{
+                margin: 0;
+
+            }
+            .read-more_text{
+                font-family: TT Lakes Medium;
+                color: $text-black;
+                font-size: 16px;
+                letter-spacing: -0.2px;
+                line-height: 24px;
+                margin: 0 0 0 8px;
+            }
+        }
+        
+        &-foto {
+            img {
+                width: 320px;
+                height: 176px;
+                margin: 16px 0 24px 0;
+
+                @media screen and (min-width: 768px){
+                    min-width: 360px;
+                    min-height: 208px;
+                    margin: 32px 25px 40px 48px;
+                    border-radius: 6px;
+                }
+                @media screen and (min-width: 1366px){
+                    min-width: 531px;
+                    min-height: 307px;
+                    margin: 32px 28px 49px 36px;
+                    border-radius: 6px;
+                }
+            }           
+        }
+
+        @media screen and (min-width: 768px){
+            display: flex;
+            flex-direction: row;
+        }
+        @media screen and (min-width: 1366px){
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

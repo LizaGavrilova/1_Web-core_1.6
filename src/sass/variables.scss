@@ -1,0 +1,36 @@
+// Шрифты
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('../assets/fonts/TT Lakes Regular/TTLakes-Regular.eot');
+    src: url('../assets/fonts/TT Lakes Regular/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/TT Lakes Regular/TTLakes-Regular.woff') format('woff'),
+    url('../assets/fonts/TT Lakes Regular/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('../assets/fonts/TT Lakes Medium/TTLakes-Medium.eot');
+    src: url('../assets/fonts/TT Lakes Medium/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/TT Lakes Medium/TTLakes-Medium.woff') format('woff'),
+    url('../assets/fonts/TT Lakes Medium/TTLakes-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('../assets/fonts/TT Lakes Bold/TTLakes-Bold.eot');
+    src: url('../assets/fonts/TT Lakes Bold/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/TT Lakes Bold/TTLakes-Bold.woff') format('woff'),
+    url('../assets/fonts/TT Lakes Bold/TTLakes-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Цвета
+$background-white: #FFFFFF;
+$background-gray: #F8F8F8;
+$text-black: #1B1C21; 
+$text-gray: #7E7E82;
+$header_border: #D9FFF5;
+$gradient: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
