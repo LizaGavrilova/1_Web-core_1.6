@@ -26,35 +26,40 @@
 
     &__table-title {
         display: none;
-        margin: 32px 40px 16px 40px;
 
         @media screen and (min-width: 768px) {
             display: grid;
-            margin: 0;
             align-items: center;
             grid-template-columns: 3fr repeat(3, 1fr);
+            margin: 32px 24px 16px 24px;
             
             font-family: TT Lakes Regular;
             font-size: 14px;
             line-height: 16px;
             color: $text-gray;
+
+            p {
+                margin: 0;
+                padding: 0 16px;
+            }
+        }
+
+        @media screen and (min-width: 1366px) {
+            margin: 32px 32px 16px 32px; 
         }
     }
 
     &__table {
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        align-items: center;
         margin: 16px 8px;
         padding: 0;
 
         @media screen and (min-width: 768px) {
-            display: grid;
-            grid-template-rows: repeat(5, 65px);
+            flex-direction: column;
 
             background-color: $background-white;
             border-radius: 6px;
-            padding: 0;
             margin: 0 24px;
         }
 
@@ -63,7 +68,120 @@
         }
 
         &-row {
+            width: 260px;
+            max-height: 200px;
+            background-color: $background-white;
+            border-radius: 6px;
 
+            @media screen and (min-width: 768px) {
+                width: 100%;
+                display: grid;
+                align-items: center;
+                grid-template-columns: 3fr repeat(3, 1fr);
+            }
+
+            @media screen and (min-width: 1366px) {
+                grid-template-columns: 3fr repeat(3, 1fr);
+            }
+
+            &:not(:last-child):after{
+                content: '';
+                width: 190%;
+                height: 1px;
+                background-color: $border;
+                margin: 0 16px;
+              }
+        }
+    }
+
+    &__service, &__cost, &__time {
+        font-family: TT Lakes Regular;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: $text-black;
+        margin: 4px 16px;
+
+        @media screen and (min-width: 768px) {
+            margin: 24px 16px;
+        }
+    }
+
+    &__mobile {
+        font-family: TT Lakes Regular;
+        font-size: 14px;
+        line-height: 16px;
+        color: $text-gray;
+        margin: 16px 16px 0 16px;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+        @media screen and (min-width: 1366px) {
+            display: none;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-evenly;
+        justify-self: center;
+        align-items: center;
+        border-radius: 15px;
+        background-color: $background-pink;
+        width: 120px;
+        height: 32px;
+
+        font-family: TT Lakes Bold;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        color: $text-white;    
+        
+        position: relative;
+        bottom: 40px;
+        left: 125px;
+
+        @media screen and (min-width: 768px){
+            position: static;
+          }
+
+    }
+
+    &__footer {
+        margin: 16px 16px 0 16px;
+
+        &-text {
+            font-family: TT Lakes Regular;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: $text-black;
+            text-align: start;
+
+            @media screen and (min-width: 768px) {
+                width: 420px;
+            }
+        }
+
+        &-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-family: TT Lakes Medium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $text-black;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin: 24px 24px 0 24px;
+        }
+        @media screen and (min-width: 1366px) {
+            margin: 32px 32px 0 32px;
         }
     }
 }

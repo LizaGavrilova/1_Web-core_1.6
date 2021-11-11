@@ -1,0 +1,127 @@
+.menu {
+    position: absolute;
+    top: 0;
+    left: -320px;
+    width: 320px;
+
+    &__wrapper {
+        background: $background-white;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &-button-close {
+            margin: 23px;
+
+            @media screen and (min-width: 1366px){
+                display: none;
+            }
+        }
+
+        &-button-search {
+            margin: 23px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 16px 0 0 0;
+        padding: 0;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            &-link {
+                font-family: 'TT Lakes Medium';
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $text-black;
+                width: 100%;
+                margin: 16px 0 16px 24px;
+            }
+        }
+
+        .active-link {
+
+            a {
+                color: $text-gray;
+            }           
+
+            &::before{
+                content: '';
+                height: 32px;
+                width: 4px;
+                background-color: $hightlight;
+              }
+        }
+    }    
+
+    &__buttons {
+        display: flex;
+        margin: 0 16px 16px 24px;
+        margin-left: 24px;  
+        margin-bottom: 16px;  
+    } 
+        
+    &__button {
+        margin-right: 16px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+
+        &-mail {
+            font-family: 'TT Lakes Medium';
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $text-black;
+            margin-bottom: 12px;
+            margin-left: 24px;
+        }
+
+        &-number {
+            font-family: 'TT Lakes Bold';
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.6px;
+            color: $text-black;
+            margin-left: 24px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__language {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 32px;
+        margin-left: 24px;
+
+        &-button {
+            font-family: 'TT Lakes Medium';
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $text-black;
+            margin-right: 7px;
+        }
+
+        .active-language {
+            color: $text-gray;
+        }
+    }
+}
+

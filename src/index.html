@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Шапка  -->
@@ -128,14 +129,14 @@
         </div>
     </main>
     <!-- Ремонт техники различных брендов -->
-    <div class="brands">
+    <section class="brands">
         <div class="brands__title">
             <p>
                 Ремонт техники различных брендов
             </p>
         </div>
 
-        <div class="brands__content">
+        <!-- <div class="brands__content">
             <div class="swiper mySwiper">
                 <ul class="brands__list swiper-wrapper">
                     <li class="brands__list-item swiper-slide">
@@ -206,13 +207,13 @@
                     </li>
                 </ul>
                 <div class="swiper-pagination"></div>
-            </div>
-
+            </div> -->
             <button class="brands__show-more">
                 <img src="assets/img/expand.svg" alt="">
                 Показать все
             </button>
         </div>
+
     </section>            
     <!-- Ремонт различных видов техники -->
     <section class="types">
@@ -223,7 +224,7 @@
         </div>
 
         <div class="types__content">
-            <div class="swiper mySwiper">
+            <!-- <div class="swiper mySwiper">
                 <ul class="types__list swiper-wrapper">
                     <li class="types__list-item swiper-slide">
                         <button class="types__list-item-button">
@@ -269,7 +270,7 @@
                     </li>
                 </ul>
                 <div class="swiper-pagination"></div>
-            </div>
+            </div> -->
     
             <button class="types__show-more">
                 <img src="assets/img/expand.svg" alt="">
@@ -296,11 +297,11 @@
             <div class="swiper mySwiper">
                 <ul class="price__table swiper-wrapper">
                     <li class="price__table-row swiper-slide">
-                        <p class="price__service-title">Ремонтные услуги</p>
+                        <p class="price__service-title price__mobile">Ремонтные услуги</p>
                         <p class="price__service">Диагностика</p>
-                        <p class="price__cost-title">Цена</p>
+                        <p class="price__cost-title price__mobile">Цена</p>
                         <p class="price__cost">Бесплатно</p>
-                        <p class="price__time-title">Срок</p>
+                        <p class="price__time-title price__mobile">Срок</p>
                         <p class="price__time">30 мин</p>
                         <button class="price__button">
                             Заказать
@@ -308,11 +309,11 @@
                         </button>
                     </li>
                     <li class="price__table-row swiper-slide">
-                        <p class="price__service-title">Ремонтные услуги</p>
+                        <p class="price__service-title price__mobile">Ремонтные услуги</p>
                         <p class="price__service">Замена дисплея</p>
-                        <p class="price__cost-title">Цена</p>
+                        <p class="price__cost-title price__mobile">Цена</p>
                         <p class="price__cost">1 000 ₽</p>
-                        <p class="price__time-title">Срок</p>
+                        <p class="price__time-title price__mobile">Срок</p>
                         <p class="price__time">30-120 мин</p>
                         <button class="price__button">
                             Заказать
@@ -320,11 +321,11 @@
                         </button>
                     </li>
                     <li class="price__table-row swiper-slide">
-                        <p class="price__service-title">Ремонтные услуги</p>
+                        <p class="price__service-title price__mobile">Ремонтные услуги</p>
                         <p class="price__service">Замена полифонического динамика</p>
-                        <p class="price__cost-title">Цена</p>
+                        <p class="price__cost-title price__mobile">Цена</p>
                         <p class="price__cost">1 000 ₽</p>
-                        <p class="price__time-title">Срок</p>
+                        <p class="price__time-title price__mobile">Срок</p>
                         <p class="price__time">30-120 мин</p>
                         <button class="price__button">
                             Заказать
@@ -332,11 +333,11 @@
                         </button>
                     </li>  
                     <li class="price__table-row swiper-slide">
-                        <p class="price__service-title">Ремонтные услуги</p>
+                        <p class="price__service-title price__mobile">Ремонтные услуги</p>
                         <p class="price__service">Тестирование с выдачей технического заключения</p>
-                        <p class="price__cost-title">Цена</p>
+                        <p class="price__cost-title price__mobile">Цена</p>
                         <p class="price__cost">1 000 ₽</p>
-                        <p class="price__time-title">Срок</p>
+                        <p class="price__time-title price__mobile">Срок</p>
                         <p class="price__time">30-120 мин</p>
                         <button class="price__button">
                             Заказать
@@ -344,11 +345,11 @@
                         </button>
                     </li>
                     <li class="price__table-row swiper-slide">
-                        <p class="price__service-title">Ремонтные услуги</p>
+                        <p class="price__service-title price__mobile">Ремонтные услуги</p>
                         <p class="price__service">Замена программного обеспечения</p>
-                        <p class="price__cost-title">Цена</p>
+                        <p class="price__cost-title price__mobile">Цена</p>
                         <p class="price__cost">1 000 ₽</p>
-                        <p class="price__time-title">Срок</p>
+                        <p class="price__time-title price__mobile">Срок</p>
                         <p class="price__time">30-120 мин</p>
                         <button class="price__button">
                             Заказать
@@ -371,14 +372,14 @@
         </div>
     </section>             
     <!-- Подвал -->
-    <footer class="main__footer">
-        <p class="main__footer-copyright">
-            © 2019 CPS Разработано командой Apesong
+    <footer class="footer">
+        <p class="footer__copyright">
+            © 2019 CPS <br> Разработано командой Apesong
         </p>
-        <p class="main__footer-pribacy-policy">
+        <p class="footer__pribacy-policy">
             Политика конфиденциальности
         </p>
-        <p class="main__footer-public-offer">
+        <p class="footer__public-offer">
             Информация, размещенная на данной странице, не является публичной офертой
         </p>
     </footer>
@@ -390,7 +391,7 @@
                 <button class="menu__header-button-close">
                     <img src="assets/img/cross.svg" alt="">
                 </button>
-                <a href="#" class="menu__header-group">
+                <a href="#" class="menu__header-button-group">
                     <img src="assets/img/group.svg" alt="">
                 </a>
                 <button class="menu__header-button-search">
@@ -400,7 +401,7 @@
             <!-- Пункты бокового меню -->
             <div class="menu__list-block">
                 <ul class="menu__list">
-                    <li class="menu__list-item">
+                    <li class="menu__list-item active-link">
                         <a class="menu__list-item-link" href="#">
                             Ремонт техники
                         </a>
@@ -462,7 +463,7 @@
             </div>
             <!-- Языки бокового меню -->
             <div class="menu__language">
-                <a href="#" class="menu__language-button">RU</a>
+                <a href="#" class="menu__language-button active-language">RU</a>
                 <a href="#" class="menu__language-button">EN</a>
                 <a href="#" class="menu__language-button">CH</a>
             </div>
@@ -477,12 +478,7 @@
                 <img src="assets/img/cross.svg" alt="">
             </button>
             <!-- Заголовок обратной связи -->
-            <div class="feedback__title">
-                <div class="feedback__title-highlight">
-                    <img src="assets/img/highlight.svg" alt="">
-                </div>
-                <h1 class="feedback__title-text">Обратная связь</h1>
-            </div>
+            <p class="feedback__title">Обратная связь</p>
             <!-- Поля ввода обратной связи -->
             <form class="feedback__form" action="#" method="get">
                 <label class="feedback__form-label-input">
@@ -506,8 +502,8 @@
                 <a class="feedback__text-link" href="#"> политикой конфиденциальности</a>
             </p>
             <!-- Кнопка отправки формы обратной связи -->
-            <button class="feedback__button">
-                ОТПРАВИТЬ
+            <button class="feedback__button-send">
+                Отправить
                 <img src="assets/img/goside.svg" alt="">
             </button>
         </div>
@@ -520,12 +516,7 @@
                 <img src="assets/img/cross.svg" alt="">
             </button>
             <!-- Заголовок звонка-->
-            <div class="callback__title">
-                <div class="callback__title-highlight">
-                    <img src="assets/img/highlight.svg" alt="">
-                </div>
-                <h1 class="callback__title-text">Обратная связь</h1>
-            </div>
+            <p class="callback__title">Заказать звонок</p>
             <!-- Поле ввода телефона -->
             <form class="callback__form" action="#" method="get">
                 <label class="callback__form-label-input">
@@ -540,11 +531,12 @@
                 <a class="callback__text-link" href="#"> политикой конфиденциальности</a>
             </p>
             <!-- Кнопка отправки формы обратного звонка -->
-            <button class="callback__button">
+            <button class="callback__button-send">
                 ОТПРАВИТЬ
                 <img src="assets/img/goside.svg" alt="">
             </button>
         </div>
-    </aside> 
+    </aside>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
 </body>
 </html>
