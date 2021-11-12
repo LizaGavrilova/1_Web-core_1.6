@@ -40,3 +40,12 @@ for (let i = 0; i < menuNavigation.length; i++) {
     menuNavigation[i].classList.add('active-link');
   });
 }
+
+const menuLanguage = document.querySelectorAll('.menu__language-button');
+
+for (let i = 0; i < menuLanguage.length; i++) {
+  menuLanguage[i].addEventListener('click', function () {
+    menu.querySelector('.active-language').classList.remove('active-language');
+    menuLanguage[i].classList.add('active-language');
+  });
+}

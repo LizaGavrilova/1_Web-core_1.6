@@ -6,7 +6,7 @@
     
     transform: translate(-320x);
     transition-duration: 1s;
-    z-index: 5;
+    z-index: 10;
 
     // @media screen and (man-width: 1366px) {
     //     transform: translate(320x);
@@ -73,6 +73,22 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
+
+            &:hover, &:focus {
+                
+                outline: none !important;
+
+                a {
+                    color: $text-gray;
+                }           
+    
+                &::before{
+                    content: '';
+                    height: 32px;
+                    width: 4px;
+                    background-color: $hightlight;
+                }
+            }
 
             &-link {
                 font-family: 'TT Lakes Medium';
@@ -170,6 +186,8 @@
             transform: translate(320px);
             transition-duration: 1s;
             z-index: 10;
+
+            box-shadow: 5px 0 50px 10px $shadow;
         }
     }
 

@@ -1,4 +1,4 @@
-const tablet = window.matchMedia('(min-width: 768px)');
+import { tablet } from '../brands/brands';
 
 if (tablet.matches === false) {
   let swiper = new Swiper('.mySwiper', {

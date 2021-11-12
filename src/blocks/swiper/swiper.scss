@@ -1,0 +1,44 @@
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    position: static;
+    --swiper-theme-color: #7E7E82;
+    margin-top: 16px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+
+@media screen and (min-width: 768px){
+    .swiper{
+      margin-left: 0;
+      margin-right: 0;
+      position: static;
+      overflow: visible;
+      list-style: none;
+      padding: 0;
+      z-index: 0;
+  
+      &-wrapper {
+        position: static;
+        width: inherit;
+        height: inherit;
+        z-index: 0;
+        transition-property: transform;
+        box-sizing: border-box;
+      }
+  
+      &-slide {
+        flex-shrink: 0;
+        width: inherit;
+        height: inherit;
+        position: static;
+        transition-property: transform;
+      }
+  
+    }
+    .swiper-android .swiper-slide, .swiper-wrapper {
+      transform: none;
+    }
+}

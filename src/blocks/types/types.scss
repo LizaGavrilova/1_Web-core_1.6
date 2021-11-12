@@ -21,8 +21,11 @@
     }
 
     &__content {
-        // width: max-content;
         margin: 24px auto;
+
+        @media screen and (min-width: 768px) {
+            width: max-content;
+        }
     }
 
     &__list {

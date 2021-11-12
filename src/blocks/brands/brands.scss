@@ -21,8 +21,11 @@
     }
 
     &__content {
-        // width: max-content;
         margin: 24px auto;
+
+        @media screen and (min-width: 768px) {
+            width: max-content;
+        }
     }
 
     &__list {
@@ -75,27 +78,54 @@
         }        
     }
 
-    &__show-more {
-        display: none;
+    &__show-more{
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
 
-        @media screen and (min-width: 768px) {
-            display: flex;
-            justify-content: space-between;
-            font-family: TT Lakes Medium;
-            color: $text-black;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: -0.2px;
-            color: $text-black;
-            margin-top: 24px;
-        }        
-
-        img {
-            margin-right: 8px;
+        margin-top: 24px;
+        
+    
+        &::before{
+          content: url('../assets/img/expand.svg');
+          margin-right: 8px;
         }
     }
-}
+    
+    &__hidden-more{
 
-.hidden{
-    display: none;
+        align-items: baseline;
+
+        &::before{
+            transform: rotate(180deg);
+        }
+    }
+
+    // &__show-more {
+    //     display: none;
+
+    //     @media screen and (min-width: 768px) {
+    //         display: flex;
+    //         justify-content: flex-start;
+    //         align-items: center;
+    //         font-family: TT Lakes Medium;
+    //         color: $text-black;
+    //         font-size: 16px;
+    //         line-height: 24px;
+    //         letter-spacing: -0.2px;
+    //         color: $text-black;
+    //         margin-top: 24px;
+
+    //     }  
+        
+    //     &-image {
+    //         margin-right: 8px;
+
+    //         &-rotate {
+    //             transform: rotate(180deg);
+    //         }
+    //     }
+    // }
 }
