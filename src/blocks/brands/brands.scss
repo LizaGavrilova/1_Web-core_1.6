@@ -1,5 +1,6 @@
 .brands {
     background: $background-gray;
+    
     &__title {
         background-image: $gradient;
         min-width: 320px;
@@ -93,4 +94,8 @@
             margin-right: 8px;
         }
     }
+}
+
+.hidden{
+    display: none;
 }

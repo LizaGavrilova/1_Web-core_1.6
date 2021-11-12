@@ -1,29 +1,30 @@
 .feedback {
 
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: $background-white;
-        position: absolute;
-        top: 0;
-        right: -320px;
-        padding: 24px 16px;
-        height: 100vh;
-        box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $background-white;
 
-        width: 320px;
-        transform: translate(320px);
-        transition-duration: 1s;
+    position: absolute;
+    top: 0;
+    right: -320px;
 
-        @media screen and (min-width: 768px){
-            width: 440px;
-            right: -440px;
-            transform: translate(440px);
-            transition-duration: 1s;
-          }
-    }  
+    padding: 24px 16px;
+    height: 100vh;
+    box-sizing: border-box;
+    z-index: 100;
+
+    width: 320px;
+    transform: translate(320px);
+    transition-duration: 2s;
+
+    @media screen and (min-width: 768px){
+        width: 440px;
+        right: -440px;
+        transform: translate(440px);
+        transition-duration: 2s;
+    }
     
     &__button {
         align-self: flex-start;
@@ -120,5 +121,15 @@
 
         position: relative;
         left: 90px;
+    }
+
+    &--open{
+        transform: translate(-320px);
+        transition-duration: 1s;
+        z-index: 10;
+        
+        @media screen and (min-width: 1366px){
+          transform: translate(-440px);
+        }
     }
 }

@@ -1,29 +1,28 @@
 .callback {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $background-white;
 
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: lightblue;
+    position: absolute;
+    top: 0;
+    right: -320px;
 
-        position: absolute;
-        top: 0;
-        right: -320px;
+    padding: 24px 16px;
+    height: 100vh;
+    box-sizing: border-box;
 
-        padding: 24px 16px;
-        height: 100vh;
-        box-sizing: border-box;
+    width: 320px;
+    transform: translate(320px);
+    transition-duration: 2s;
+    z-index: 100;
 
-        width: 320px;
-        transform: translate(320px);
-        transition-duration: 1s;
-
-        @media screen and (min-width: 768px){
-            width: 440px;
-            right: -440px;
-            transform: translate(440px);
-            transition-duration: 1s;
-        }
+    @media screen and (min-width: 768px){
+        width: 440px;
+        right: -440px;
+        transform: translate(440px);
+        transition-duration: 2s;
     }
 
     &__button {
@@ -110,6 +109,16 @@
 
         @media screen and (min-width: 768px){
             left: 105px;
+        }
+    }
+
+    &--open {
+        transform: translate(-320px);
+        transition-duration: 1s;
+        z-index: 100;
+
+        @media screen and (min-width: 768px){
+            transform: translate(-440px);
         }
     }
 }

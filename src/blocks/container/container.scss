@@ -1,0 +1,52 @@
+body {
+    font-family: "TT Lakes";
+    background: $background-gray;
+    min-width: 320px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    background-color: $background-gray;
+
+    @media screen and (min-width: 1366px) {
+        width: calc(100vw - 320px);
+        transform: translate(320px);
+    }
+}
+
+.blur{
+    transition-property: opacity, background-color;
+    transition-duration: 1s;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    z-index: 10;
+    opacity: 0.9;
+    background-color: $background-white;
+    position: absolute;
+}
+
+.no-scroll{
+    overflow-y: hidden;
+}
+  
+.hidden{
+    display: none!important;
+}

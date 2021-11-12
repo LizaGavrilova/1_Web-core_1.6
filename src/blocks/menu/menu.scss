@@ -1,20 +1,40 @@
 .menu {
     position: absolute;
     top: 0;
-    left: -320px;
-    width: 320px;
+    left: -320px;  
+    min-width: 320px; 
+    
+    transform: translate(-320x);
+    transition-duration: 1s;
+    z-index: 5;
+
+    // @media screen and (man-width: 1366px) {
+    //     transform: translate(320x);
+    //     transition-duration: 1s;
+    // }    
 
     &__wrapper {
-        background: $background-white;
+        background: $background-white; 
+        min-width: 320px;       
+        min-height: 100vh;
         
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
+
+
+        @media screen and (min-width: 1366px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            height: 100vh;
+        }
     }
 
     &__header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
 
         &-button-close {
@@ -25,8 +45,20 @@
             }
         }
 
+        &-button-group {
+            margin: 16px;
+
+            @media screen and (min-width: 1366px){
+                margin-left: 22px;
+            }
+        }
+
         &-button-search {
             margin: 23px;
+
+            @media screen and (min-width: 1366px){
+                margin: 30px;
+            }
         }
     }
 
@@ -123,5 +155,31 @@
             color: $text-gray;
         }
     }
+
+    &__footer {
+
+        @media screen and (min-width: 1366px) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &--open {
+        @media screen and (max-width: 1366px){
+            transform: translate(320px);
+            transition-duration: 1s;
+            z-index: 10;
+        }
+    }
+
+    // &--close {
+    //     @media screen and (max-width: 1366px){
+    //         transform: translate(-320px);
+    //         transition-duration: 1s;
+    //         z-index: 10;
+    //     }
+
+    // }
 }
 
