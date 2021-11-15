@@ -20,7 +20,7 @@
     }
 
     &__content {
-        margin: 0 auto;
+        margin: 0 8px;
     }
 
     &__table-title {
@@ -49,9 +49,6 @@
     }
 
     &__table {
-        display: flex;
-        align-items: center;
-        margin: 16px 8px;
         padding: 0;
 
         @media screen and (min-width: 768px) {
@@ -69,7 +66,7 @@
 
         &-row {
             width: 260px;
-            max-height: 200px;
+            max-height: 210px;
             background-color: $background-white;
             border-radius: 6px;
 

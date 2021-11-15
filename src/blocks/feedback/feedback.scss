@@ -1,23 +1,22 @@
 .feedback {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     background-color: $background-white;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -320px;
 
     padding: 24px 16px;
     height: 100vh;
     box-sizing: border-box;
-    z-index: 100;
 
     width: 320px;
     transform: translate(320px);
     transition-duration: 2s;
+    z-index: 100;
 
     @media screen and (min-width: 768px){
         width: 440px;
@@ -73,6 +72,14 @@
             @media screen and (min-width: 768px){
                 width: 376px;
             }
+
+            &::-webkit-input-placeholder {
+                font-family: TT Lakes Regular;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $text_input;
+            }
         }
 
         &-message {
@@ -86,6 +93,14 @@
 
             @media screen and (min-width: 768px){
                 width: 376px;
+            }
+
+            &::-webkit-input-placeholder {
+                font-family: TT Lakes Regular;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $text_input;
             }
         }
     }
@@ -128,7 +143,7 @@
         transition-duration: 1s;
         z-index: 10;
         
-        @media screen and (min-width: 1366px){
+        @media screen and (min-width: 768px){
           transform: translate(-440px);
         }
     }

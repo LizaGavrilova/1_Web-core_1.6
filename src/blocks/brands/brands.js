@@ -1,5 +1,5 @@
 export const tablet = window.matchMedia('(min-width: 768px)');
-export const desktop = window.matchMedia('(min-width: 1120px)');
+export const desktop = window.matchMedia('(min-width: 1366px)');
 
 const allBrands = document.querySelectorAll('.brands__list-item');
 const brandsShowMoreButton = document.querySelector('.brands__show-more');
@@ -55,7 +55,7 @@ const brandsToggle = () => {
     if (hiddensBrands[i].classList.contains('hidden')) {
       brandsShowMoreButton.textContent = 'Скрыть';
     } else {
-      brandsShowMoreButton.textContent = 'Показать ещё';
+      brandsShowMoreButton.textContent = 'Показать все';
     }
     hiddensBrands[i].classList.toggle('hidden');
   });

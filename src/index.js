@@ -1,3 +1,4 @@
+import 'normalize.css';
 import './sass/style.scss';
 import './blocks/swiper/swiper';
 import './blocks/header/header';

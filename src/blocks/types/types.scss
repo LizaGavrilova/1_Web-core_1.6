@@ -21,19 +21,16 @@
     }
 
     &__content {
-        margin: 24px auto;
+        margin: 24px 16px;
 
         @media screen and (min-width: 768px) {
             width: max-content;
+            margin: 24px auto;
         }
     }
 
     &__list {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin: 0 auto;
+        padding: 0;
 
         @media screen and (min-width: 768px) {
             display: grid;
@@ -87,23 +84,32 @@
         }
     }
 
-    &__show-more {
+    &__show-more{
         display: none;
 
         @media screen and (min-width: 768px) {
             display: flex;
             justify-content: space-between;
-            font-family: TT Lakes Medium;
-            color: $text-black;
             font-size: 16px;
             line-height: 24px;
-            letter-spacing: -0.2px;
-            color: $text-black;
-            margin-top: 24px;
-        }        
+            font-weight: 500;
 
-        img {
+            margin-top: 24px;
+        
+            &::before{
+            content: url('../assets/img/expand.svg');
             margin-right: 8px;
+        }
+
+        }
+    }
+    
+    &__hidden-more{
+
+        align-items: baseline;
+
+        &::before{
+            transform: rotate(180deg);
         }
     }
 }

@@ -17,28 +17,18 @@ if (desktop.matches) {
   }
 }
 
-typesShowMoreButton.addEventListener('click', function () {
-  if (typesShowMoreButton.classList.contains('expand')) {
-    typesShowMoreButton.textContent = 'Скрыть';
+let hiddensTypes = document.querySelectorAll('.types__list > .hidden');
 
-    typesShowMoreButton.classList.remove('expand');
-    typesShowMoreButton.classList.add('hide');
-    for (let i = 0; i < allTypes.length; i++) {
-      allTypes[i].classList.remove('hidden');
+const typesToggle = () => {
+  hiddensTypes.forEach(function (item, i, hiddensTypes) {
+    if (hiddensTypes[i].classList.contains('hidden')) {
+      typesShowMoreButton.textContent = 'Скрыть';
+    } else {
+      typesShowMoreButton.textContent = 'Показать все';
     }
-  } else if (typesShowMoreButton.classList.contains('hide')) {
-    typesShowMoreButton.textContent = 'Показать все';
+    hiddensTypes[i].classList.toggle('hidden');
+  });
+  typesShowMoreButton.classList.toggle('brands__hidden-more');
+};
 
-    typesShowMoreButton.classList.remove('hide');
-    typesShowMoreButton.classList.add('expand');
-    if (desktop.matches) {
-      for (let i = visibleItemsDesktop; i < allTypes.length; i++) {
-        allTypes[i].classList.add('hidden');
-      }
-    } else if (tablet.matches) {
-      for (let i = visibleItemsTablet; i < allTypes.length; i++) {
-        allTypes[i].classList.add('hidden');
-      }
-    }
-  }
-});
+typesShowMoreButton.addEventListener('click', typesToggle);
