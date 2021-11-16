@@ -2,7 +2,8 @@
     position: absolute;
     top: 0;
     left: -320px;  
-    min-width: 320px; 
+    min-width: 320px;
+    height: 100vh;
     
     transform: translate(-320x);
     transition-duration: 1s;
@@ -16,7 +17,7 @@
     &__wrapper {
         background: $background-white; 
         min-width: 320px;       
-        min-height: 100vh;
+        height: 100vh;
         
         display: flex;
         flex-direction: column;
@@ -62,17 +63,25 @@
         }
     }
 
-    &__list {
+    &__list-block {
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
         justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column; 
+        flex-grow: 1;       
+        justify-content: space-between;
+        max-height: 450px;
         margin: 16px 0 0 0;
         padding: 0;
 
         &-item {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
 
             &:hover, &:focus {
                 
@@ -97,7 +106,8 @@
                 letter-spacing: -0.2px;
                 color: $text-black;
                 width: 100%;
-                margin: 16px 0 16px 24px;
+                margin: 6px 0 6px 24px;
+                margin-left: 24px;
             }
         }
 
