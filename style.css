@@ -726,10 +726,10 @@ li {
       color: #7E7E82;
       padding: 16px;
       margin: 0; }
-  .types__content {
+  .types__content, .types__content-swiper {
     margin: 24px 16px; }
     @media screen and (min-width: 768px) {
-      .types__content {
+      .types__content, .types__content-swiper {
         width: -webkit-max-content;
         width: -moz-max-content;
         width: max-content;
