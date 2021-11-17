@@ -329,7 +329,6 @@ body {
   font-family: "TT Lakes";
   background: #F8F8F8;
   min-width: 320px;
-  margin: 0;
   overflow-x: hidden; }
 
 button {
@@ -610,6 +609,14 @@ li {
 
 .brands {
   background: #F8F8F8; }
+  .brands__content {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .brands__content {
+        display: block; } }
+  @media screen and (min-width: 768px) {
+    .brands__content-swiper {
+      display: none; } }
   .brands__title {
     background-image: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
     min-width: 320px;
@@ -625,10 +632,10 @@ li {
       color: #7E7E82;
       padding: 16px;
       margin: 0; }
-  .brands__content {
+  .brands__content, .brands__content-swiper {
     margin: 24px 16px; }
     @media screen and (min-width: 768px) {
-      .brands__content {
+      .brands__content, .brands__content-swiper {
         margin: 24px auto;
         width: -webkit-max-content;
         width: -moz-max-content;
@@ -671,7 +678,13 @@ li {
       .brands__list-item-go {
         margin-right: 16px; }
   .brands__show-more {
-    display: none; }
+    display: none;
+    font-family: TT Lakes Medium;
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21; }
     @media screen and (min-width: 768px) {
       .brands__show-more {
         display: flex;
@@ -690,6 +703,14 @@ li {
 
 .types {
   background: #F8F8F8; }
+  .types__content {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .types__content {
+        display: block; } }
+  @media screen and (min-width: 768px) {
+    .types__content-swiper {
+      display: none; } }
   .types__title {
     background-image: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
     min-width: 320px;
@@ -759,7 +780,13 @@ li {
           align-self: flex-end;
           margin: 0 16px 16px 0; }
   .types__show-more {
-    display: none; }
+    display: none;
+    font-family: TT Lakes Medium;
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21; }
     @media screen and (min-width: 768px) {
       .types__show-more {
         display: flex;
@@ -777,7 +804,19 @@ li {
       transform: rotate(180deg); }
 
 .price {
-  background: #F8F8F8; }
+  background: #F8F8F8;
+  margin-top: 24px; }
+  .price__content {
+    margin: 0 8px;
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .price__content {
+        display: block; } }
+  .price__content-swiper {
+    margin: 0 8px; }
+    @media screen and (min-width: 768px) {
+      .price__content-swiper {
+        display: none; } }
   .price__title {
     background-image: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
     height: auto;
@@ -792,8 +831,6 @@ li {
       color: #7E7E82;
       padding: 16px;
       margin: 0; }
-  .price__content {
-    margin: 0 8px; }
   .price__table-title {
     display: none; }
     @media screen and (min-width: 768px) {
@@ -965,13 +1002,14 @@ li {
   top: 0;
   left: -320px;
   min-width: 320px;
+  height: 100vh;
   transform: translate(-320x);
   transition-duration: 1s;
   z-index: 9; }
   .menu__wrapper {
     background: #FFFFFF;
     min-width: 320px;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
@@ -1001,16 +1039,22 @@ li {
       @media screen and (min-width: 1366px) {
         .menu__header-button-search {
           margin: 30px; } }
+  .menu__list-block {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between; }
   .menu__list {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: space-between;
+    max-height: 450px;
     margin: 16px 0 0 0;
     padding: 0; }
     .menu__list-item {
       display: flex;
-      align-items: center;
-      justify-content: flex-start; }
+      align-items: center; }
       .menu__list-item:hover, .menu__list-item:focus {
         outline: none !important; }
         .menu__list-item:hover a, .menu__list-item:focus a {
@@ -1027,7 +1071,8 @@ li {
         letter-spacing: -0.2px;
         color: #1B1C21;
         width: 100%;
-        margin: 16px 0 16px 24px; }
+        margin: 6px 0 6px 24px;
+        margin-left: 24px; }
     .menu__list .active-link a {
       color: #7E7E82; }
     .menu__list .active-link::before {
