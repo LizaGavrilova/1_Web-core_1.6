@@ -1,5 +1,20 @@
 .types {
     background: $background-gray;
+
+    &__content {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__content-swiper {
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
     
     &__title {
         background-image: $gradient;

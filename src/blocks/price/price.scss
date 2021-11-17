@@ -1,5 +1,23 @@
 .price {
     background: $background-gray;
+    margin-top: 24px;
+
+    &__content {
+        margin: 0 8px;
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__content-swiper {
+        margin: 0 8px;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
 
     &__title {
         background-image: $gradient;
@@ -17,10 +35,6 @@
             padding: 16px;
             margin: 0;
         }
-    }
-
-    &__content {
-        margin: 0 8px;
     }
 
     &__table-title {
